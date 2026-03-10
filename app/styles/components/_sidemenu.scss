@@ -75,3 +75,10 @@ $aside-menu-nav-link-border-color: #c7d0d9;
     border-bottom: 0.1rem solid $aside-menu-nav-link-border-color;
   }
 }
+
+.sidemenu-action-btn {
+  align-self: flex-start;
+  margin-left: 2rem;
+  min-width: 18.6rem;
+  justify-content: space-between;
+}

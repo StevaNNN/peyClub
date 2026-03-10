@@ -41,7 +41,6 @@ $header-link-height: 2.7rem !default;
 }
 
 .#{$prefix}header__nav-link {
-  color: $text-color-primary;
   font-weight: $font-weight-medium;
   text-decoration: none;
   transition: $transition;
@@ -64,7 +63,9 @@ $header-link-height: 2.7rem !default;
 
   &:hover,
   &.active {
-    color: $bg-color-brand;
+    .#{$prefix}text {
+      color: $bg-color-brand;
+    }
 
     &:after {
       transform: scaleX(1);
@@ -84,6 +85,9 @@ $header-link-height: 2.7rem !default;
   line-height: 1;
   border-radius: 999px;
   cursor: pointer;
+  appearance: none;
+  min-height: 27px;
+  font-family: "sfRegular";
 
   &:focus {
     outline: none;

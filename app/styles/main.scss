@@ -40,6 +40,14 @@ p {
 }
 
 main {
-  max-width: 140rem;
+  max-width: 144rem;
   margin: 0 auto;
+}
+
+.section {
+  padding: 8rem 10rem;
+}
+
+.section-title {
+  @include respond-below
 }

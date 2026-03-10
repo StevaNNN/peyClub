@@ -15,13 +15,17 @@ interface HeroSectionProps {
 
 const HeroSection: FC<HeroSectionProps> = ({ t }) => {
   return (
-    <section className="h-box hero-section flex-wrap" id="hero">
-      <Image
-        className="hero-img"
-        src={HeroImage}
-        alt={t.heroSection.imagAlt}
-        sizes="100vw"
-      />
+    <section
+      className="section h-box hero-section justify-content-center"
+      id="hero"
+    >
+      <div className="image-wrapper">
+        <Image
+          className="hero-img"
+          src={HeroImage}
+          alt={t.heroSection.imagAlt}
+        />
+      </div>
       <div className="v-box text-wrap align-items-start">
         <Text fontVariant="lineca" htmlElement="h2" fontSize="3xl">
           <Text

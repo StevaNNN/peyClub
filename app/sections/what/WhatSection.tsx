@@ -27,7 +27,7 @@ const sectionCardData = (t: LocaleDictionary) => [
 
 const WhatSection: FC<WhatWeDoProps> = ({ t }) => {
   return (
-    <section className="what-section v-box " id="what-we-do">
+    <section className=" section what-section v-box " id="what-we-do">
       <div className="v-box section-header">
         <Text fontSize="2xl" htmlElement="h3" fontVariant="lineca">
           {t.whatSection.title}

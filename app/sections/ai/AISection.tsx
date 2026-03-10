@@ -8,7 +8,7 @@ interface AISectionProps {
 
 const AISection: React.FC<AISectionProps> = ({ t }) => {
   return (
-    <section className="ai-section v-box" id="ai-360°">
+    <section className="section ai-section v-box" id="ai-360°">
       <Text fontSize="2xl" htmlElement="h3" fontVariant="lineca">
         {t.aiSection.title}
       </Text>

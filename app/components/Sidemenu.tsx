@@ -5,13 +5,16 @@ import { FC } from "react";
 import Text from "./Text";
 import Logo from "./Logo";
 import Icon from "./Icon";
+import Button from "./Button";
+import { routes } from "../routes";
+import { LocaleDictionary } from "../lib/i18n/types";
 
 export interface SidemenuProps {
   items: string[];
   activeHash: string;
   onActiveChange: (hash: string) => void;
   isClosing: boolean;
-  t: any;
+  t: LocaleDictionary;
   onClose: () => void;
 }
 
@@ -60,6 +63,15 @@ const Sidemenu: FC<SidemenuProps> = ({
             );
           })}
         </nav>
+        <Button
+          className="animate-button sidemenu-action-btn"
+          href={routes.contact}
+          size="md"
+          variant={"brand"}
+        >
+          <Text htmlElement="span">Contact</Text>
+          <Icon name="arrow-right" width={20} height={20} color="#fff" />
+        </Button>
       </div>
     </aside>
   );
