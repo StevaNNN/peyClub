@@ -8,6 +8,7 @@ import sr from "./lib/i18n/sr/sr";
 import HeroSection from "./sections/hero/HeroSection";
 import WhatSection from "./sections/what/WhatSection";
 import AISection from "./sections/ai/AISection";
+import WhoSection from "./sections/who/WhoSection";
 
 export default function Home() {
   const locale = resolveLocale();
@@ -22,6 +23,7 @@ export default function Home() {
         <HeroSection t={t} />
         <WhatSection t={t} />
         <AISection t={t} />
+        <WhoSection t={t} />
       </main>
     </>
   );

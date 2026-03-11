@@ -33,8 +33,14 @@
     height: 7.2rem;
   }
 
+  @include respond-below(1455) {
+    .section-cards {
+      justify-content: center;
+    }
+  }
+
   @include respond-below(md) {
-    .section-inner {
+    .section-cards {
       align-items: center;
     }
 
