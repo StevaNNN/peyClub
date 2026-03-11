@@ -74,9 +74,17 @@ const sr: LocaleDictionary = {
     title: "Who It's For",
     paragraph: "Built for any business where speed and experience matter.",
     slide1Title: "Restaurants & Cafes",
+    slide1FlipText:
+      "Reduce ordering and payment time by up to 30-40%, increase table turnover, and let staff focus on service instead of transactions.",
     slide2Title: "Bars & Nightlife",
+    slide2FlipText:
+      "Enable faster drink ordering, instant payment, and smoother peak-hour operations with fewer queues and missed orders.",
     slide3Title: "Stadium & Arenas",
+    slide3FlipText:
+      "Handle high-volume ordering and payments during peak moments while reducing queues and increasing completed transactions.",
     slide4Title: "Hotels & Resorts",
+    slide4FlipText:
+      "Simplify on-property ordering and payments across restaurants, bars, pools, and room services — all from one platform.",
   },
   customerSection: {
     title: "Customer Journey",
