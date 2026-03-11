@@ -1,5 +1,20 @@
 @use "../abstract/api" as *;
 
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes draw-border {
+  from {
+    --border-angle: 0deg;
+  }
+  to {
+    --border-angle: 360deg;
+  }
+}
+
 .ai-section {
   background-color: $bg-color-primary;
 
@@ -156,6 +171,12 @@
     height: 44rem;
     border: 2px dashed #98a7ff;
     border-radius: 2.4rem;
+    mask: conic-gradient(
+      from 0deg at 50% 0%,
+      #000 var(--border-angle),
+      transparent 0
+    );
+    animation: draw-border 4s ease-in-out infinite;
   }
 
   .ai-grid-connector-inner {
@@ -226,17 +247,17 @@
     .ai-card {
       min-width: 18rem;
 
-      // &--left {
-      //   grid-column: 1;
-      //   grid-row: 2;
-      //   margin-right: -6rem;
-      // }
+      &--left {
+        grid-column: 1;
+        grid-row: 2;
+        margin-right: -6rem;
+      }
 
-      // &--right {
-      //   grid-column: 3;
-      //   grid-row: 2;
-      //   margin-left: -6rem;
-      // }
+      &--right {
+        grid-column: 3;
+        grid-row: 2;
+        margin-left: -6rem;
+      }
     }
 
     .ai-card__content {
@@ -265,11 +286,13 @@
   }
 
   @include respond-below(730) {
-    & {
-      padding: 8rem 2rem;
+    &.section {
+      padding: 8rem 0;
     }
-    .ai-grid-connector-inner {
-      transform: translate(-50%, -38%);
+
+    .section-header {
+      padding: 0 6.4rem;
+      max-width: 100%;
     }
   }
 
@@ -280,7 +303,7 @@
 
     .section-header {
       gap: 1.6rem;
-
+      padding: 0 2rem;
       p {
         font-size: 2rem;
       }
@@ -339,6 +362,23 @@
 
     .ai-grid {
       gap: 0.8rem;
+    }
+  }
+
+  @include respond-below(500) {
+    .ai-grid-connector {
+      width: 27rem;
+    }
+  }
+
+  @include respond-below(500) {
+    .ai-grid__center {
+      width: 4.2rem;
+      height: 4.2rem;
+    }
+
+    .ai-card {
+      min-width: 12rem;
     }
   }
 }
