@@ -1,0 +1,20 @@
+@use "../abstract/api" as *;
+
+.counter-section {
+  background-color: $bg-color-brand;
+  height: 34.8rem;
+
+  p {
+    &:first-of-type {
+      color: $text-color-accent;
+    }
+
+    &:last-of-type {
+      color: $text-color-inverse;
+    }
+  }
+
+  @include respond-below(sm) {
+    flex-direction: column;
+  }
+}

@@ -133,6 +133,12 @@ const en = {
         "Convert intelligence into measurable growth. AI continuously refines pricing dynamics, loyalty triggers, offer timing, and experience personalization to increase revenue per guest, improve retention, and protect margins.",
     },
   },
+  counterSection: {
+    text1: "Payment Per Check",
+    text2: "Daily Revenue",
+    text3: "More tips",
+    text4: "Completed Orders",
+  },
 };
 
 export default en;

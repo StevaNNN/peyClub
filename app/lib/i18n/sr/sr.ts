@@ -87,6 +87,31 @@ const sr: LocaleDictionary = {
       "Simplify on-property ordering and payments across restaurants, bars, pools, and room services — all from one platform.",
   },
   customerSection: {
+    title: "Customer Journey",
+    paragraph: "AI guiding every moment of the guest experience.",
+
+    slide1: {
+      title: "Seat & Scan",
+      paragraph:
+        "From seat to menu in seconds. Customers simply scan the QR code at the table or venue and instantly access PeyClub — no app download, no friction, no waiting.",
+    },
+    slide2: {
+      title: "Decide",
+      paragraph:
+        "Smart decisions, guided by AI. Guests can ask PeyClub questions by voice or text about preferences, allergens, calories, or budget, helping them quickly decide what fits their needs.",
+    },
+    slide3: {
+      title: "Dine & Add",
+      paragraph:
+        "Order more, without interruption. Customers can add drinks or desserts anytime during the experience using quick voice prompts — no need to flag down staff.",
+    },
+    slide4: {
+      title: "Pay",
+      paragraph:
+        "Instant, secure checkout. With one tap, customers pay using Apple Pay or Google Pay, split the bill if needed, and add tips seamlessly.",
+    },
+  },
+  establishmentSection: {
     title: "Establishment Journey",
     paragraph: "Where intelligence becomes performance.",
     slide1: {
@@ -110,29 +135,11 @@ const sr: LocaleDictionary = {
         "Convert intelligence into measurable growth. AI continuously refines pricing dynamics, loyalty triggers, offer timing, and experience personalization to increase revenue per guest, improve retention, and protect margins.",
     },
   },
-  establishmentSection: {
-    title: "Customer Journey",
-    paragraph: "AI guiding every moment of the guest experience.",
-    slide1: {
-      title: "Seat & Scan",
-      paragraph:
-        "From seat to menu in seconds. Customers simply scan the QR code at the table or venue and instantly access PeyClub — no app download, no friction, no waiting.",
-    },
-    slide2: {
-      title: "Decide",
-      paragraph:
-        "Smart decisions, guided by AI. Guests can ask PeyClub questions by voice or text about preferences, allergens, calories, or budget, helping them quickly decide what fits their needs.",
-    },
-    slide3: {
-      title: "Dine & Add",
-      paragraph:
-        "Order more, without interruption. Customers can add drinks or desserts anytime during the experience using quick voice prompts — no need to flag down staff.",
-    },
-    slide4: {
-      title: "Pay",
-      paragraph:
-        "Instant, secure checkout. With one tap, customers pay using Apple Pay or Google Pay, split the bill if needed, and add tips seamlessly.",
-    },
+  counterSection: {
+    text1: "Payment Per Check",
+    text2: "Daily Revenue",
+    text3: "More tips",
+    text4: "Completed Orders",
   },
 };
 
