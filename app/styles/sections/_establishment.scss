@@ -1,0 +1,16 @@
+.establishment-section {
+  .slider-slide {
+    flex-direction: row-reverse;
+  }
+
+  .slide-right {
+    padding-left: 3.2rem;
+
+    .bg-graphic {
+      background-image: url("../../resources//graphics/establishment.svg");
+      left: 0;
+      width: 674px;
+      background-position: left;
+    }
+  }
+}

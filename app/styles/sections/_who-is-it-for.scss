@@ -88,18 +88,6 @@
     position: static;
   }
 
-  @include respond-below(1455) {
-    .section-cards {
-      justify-content: center;
-    }
-  }
-
-  @include respond-below(1289) {
-    .section-cards {
-      justify-content: center;
-    }
-  }
-
   @include respond-below(751) {
     .who-card {
       min-width: 43rem;

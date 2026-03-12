@@ -17,34 +17,30 @@ export interface CustomerSectionProps {
 const sliderData = (t: LocaleDictionary): SliderSlideProps[] => [
   {
     img: c1,
-    title: "Understand",
-    paragraph:
-      "Decode guest behavior with AI. AI captures preferences, spending patterns, allergens, feedback sentiment, ordering habits and timing.",
+    title: t.customerSection.slide1.title,
+    paragraph: t.customerSection.slide1.paragraph,
   },
   {
     img: c2,
-    title: "Optimize",
-    paragraph:
-      "Turn intelligence into coordinated action. AI transforms behavioral insights into real-time operational guidance. It adjusts upsell prompts, prioritizes menu items, balances kitchen load, and supports staff decisions as service unfolds.",
+    title: t.customerSection.slide2.title,
+    paragraph: t.customerSection.slide2.paragraph,
   },
   {
     img: c3,
-    title: "Predict",
-    paragraph:
-      "Anticipate demand before it impacts operations. AI analyzes patterns across orders, timing, inventory flow, and guest behavior to forecast table turns, staffing needs, and sell-through performance.",
+    title: t.customerSection.slide3.title,
+    paragraph: t.customerSection.slide3.paragraph,
   },
   {
     img: c4,
-    title: "Grow",
-    paragraph:
-      "Convert intelligence into measurable growth. AI continuously refines pricing dynamics, loyalty triggers, offer timing, and experience personalization to increase revenue per guest, improve retention, and protect margins.",
+    title: t.customerSection.slide4.title,
+    paragraph: t.customerSection.slide4.paragraph,
   },
 ];
 
 const CustomerSection: FC<CustomerSectionProps> = ({ t }) => {
   return (
     <section className="section customer-section v-box" id="customer-journey">
-      <div className="section-inner v-box">
+      <div className="section-inner v-box align-items-center">
         <div className="v-box section-header">
           <Text
             fontSize="2xl"
@@ -56,7 +52,7 @@ const CustomerSection: FC<CustomerSectionProps> = ({ t }) => {
           </Text>
           <Text fontSize="lg">{t.customerSection.paragraph}</Text>
         </div>
-        <Slider data={sliderData(t)} t={t} />
+        <Slider data={sliderData(t)} />
       </div>
     </section>
   );

@@ -87,6 +87,7 @@ const en = {
   customerSection: {
     title: "Customer Journey",
     paragraph: "AI guiding every moment of the guest experience.",
+
     slide1: {
       title: "Seat & Scan",
       paragraph:
@@ -111,6 +112,26 @@ const en = {
   establishmentSection: {
     title: "Establishment Journey",
     paragraph: "Where intelligence becomes performance.",
+    slide1: {
+      title: "Understand",
+      paragraph:
+        "Decode guest behavior with AI. AI captures preferences, spending patterns, allergens, feedback sentiment, ordering habits and timing.",
+    },
+    slide2: {
+      title: "Optimize",
+      paragraph:
+        "Turn intelligence into coordinated action. AI transforms behavioral insights into real-time operational guidance. It adjusts upsell prompts, prioritizes menu items, balances kitchen load, and supports staff decisions as service unfolds.",
+    },
+    slide3: {
+      title: "Predict",
+      paragraph:
+        "Anticipate demand before it impacts operations. AI analyzes patterns across orders, timing, inventory flow, and guest behavior to forecast table turns, staffing needs, and sell-through performance.",
+    },
+    slide4: {
+      title: "Grow",
+      paragraph:
+        "Convert intelligence into measurable growth. AI continuously refines pricing dynamics, loyalty triggers, offer timing, and experience personalization to increase revenue per guest, improve retention, and protect margins.",
+    },
   },
 };
 

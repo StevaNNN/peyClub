@@ -1,22 +1,35 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .slider-viewport {
   overflow: hidden;
   gap: 4rem;
-
-  img {
-    width: 47rem;
-    height: 46rem;
-  }
+  padding: 0 18.6rem;
+  max-width: 100%;
 }
 
 .slider-container {
   display: flex;
+  gap: 3.2rem;
 }
 
 .slider-slide {
-  flex: 0 0 100%;
+  flex: 0 0 100%; // in order to see next slide partialy
   background-color: #e6f9ff;
-  width: 106.7rem;
+  max-width: 106.7rem;
   border-radius: 2.4rem;
+
+  &.active-slide {
+    .bg-graphic {
+      animation: fade-in 1000ms ease-out 500ms forwards;
+    }
+  }
 }
 
 .slider-actions-wrap {
@@ -30,5 +43,53 @@
 
   &.disabled {
     opacity: 0.4;
+  }
+}
+
+.slide-right {
+  padding: 3.2rem 3.2rem 3.2rem 0;
+  max-width: 47rem;
+  max-height: 46rem;
+  position: relative;
+
+  // Make direct text children stack above the graphic
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  img {
+    object-fit: contain;
+    border-radius: 1.6rem;
+    width: auto;
+    height: 100%;
+  }
+
+  .bg-graphic {
+    background-image: url("../../resources//graphics/customer.svg");
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 698px;
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: contain;
+    opacity: 0;
+  }
+}
+
+.slide-left {
+  padding: 9.3rem 9.3rem 3.2rem;
+  gap: 2rem;
+  flex: 1;
+  position: relative;
+
+  p {
+    max-width: 34.4rem;
+
+    &:last-of-type {
+      align-content: flex-end;
+    }
   }
 }

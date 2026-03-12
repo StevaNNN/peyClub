@@ -2,7 +2,6 @@
 
 import useEmblaCarousel from "embla-carousel-react";
 import Icon from "./Icon";
-import { LocaleDictionary } from "../lib/i18n/types";
 import { FC, useCallback, useEffect, useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import Text from "./Text";
@@ -14,25 +13,20 @@ export interface SliderSlideProps {
 }
 
 export interface SliderProps {
-  t: LocaleDictionary;
   data: SliderSlideProps[];
 }
 
-const Slider: FC<SliderProps> = ({ t, data }) => {
+const Slider: FC<SliderProps> = ({ data }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel();
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(1);
-  const [totalSlides, setTotalSlides] = useState(data.length);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const syncSliderState = useCallback(() => {
     if (!emblaApi) return;
-
     setCanScrollPrev(emblaApi.canScrollPrev());
     setCanScrollNext(emblaApi.canScrollNext());
-
-    setCurrentSlide(emblaApi.selectedScrollSnap() + 1);
-    setTotalSlides(emblaApi.scrollSnapList().length);
+    setCurrentSlide(emblaApi.selectedScrollSnap());
   }, [emblaApi]);
 
   useEffect(() => {
@@ -48,22 +42,35 @@ const Slider: FC<SliderProps> = ({ t, data }) => {
     };
   }, [emblaApi, syncSliderState]);
 
-  const prev = () => emblaApi?.scrollPrev();
-  const next = () => emblaApi?.scrollNext();
+  const prev = () => {
+    emblaApi?.scrollPrev();
+  };
+
+  const next = () => {
+    emblaApi?.scrollNext();
+  };
 
   return (
     <div className="slider-viewport v-box" ref={emblaRef}>
       <div className="slider-container h-box">
         {data.map((d, i) => (
-          <div className="slider-slide h-box" key={i}>
-            <div className="slider-slide-left">
-              <Text>{d.title}</Text>
-              <Text>{d.paragraph}</Text>
-              <Text>
-                {currentSlide} / {totalSlides}
+          <div
+            className={`slider-slide h-box${i === currentSlide ? " active-slide" : ""}`}
+            key={i}
+          >
+            <div className="slide-left v-box">
+              <Text fontVariant="lineca" fontSize="xl">
+                {d.title}
+              </Text>
+              <Text fontSize="md">{d.paragraph}</Text>
+              <Text className="flex-1">
+                {i + 1} / {data.length}
               </Text>
             </div>
-            <Image src={d.img} alt={d.title} />
+            <div className="slide-right">
+              <div className="bg-graphic" />
+              <Image src={d.img} alt={d.title} />
+            </div>
           </div>
         ))}
       </div>

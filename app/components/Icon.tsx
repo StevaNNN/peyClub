@@ -354,16 +354,16 @@ const Icon: FC<IconProps> = ({
             <path
               d="M15.8335 10L4.16683 10"
               stroke={hasCustomColor ? "currentColor" : "#004FE0"}
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               d="M10 15.834L4.16667 10.0007L10 4.16732"
               stroke={hasCustomColor ? "currentColor" : "#004FE0"}
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </>
         );
@@ -373,16 +373,16 @@ const Icon: FC<IconProps> = ({
             <path
               d="M4.1665 10H15.8332"
               stroke={hasCustomColor ? "currentColor" : "#004FE0"}
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               d="M10 4.16602L15.8333 9.99935L10 15.8327"
               stroke={hasCustomColor ? "currentColor" : "#004FE0"}
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </>
         );

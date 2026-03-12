@@ -10,6 +10,7 @@ import WhatSection from "./sections/what/WhatSection";
 import AISection from "./sections/ai/AISection";
 import WhoSection from "./sections/who/WhoSection";
 import CustomerSection from "./sections/customer/CustomerSection";
+import EstablishmentSection from "./sections/establishment/EstablishmentSection";
 
 export default function Home() {
   const locale = resolveLocale();
@@ -26,6 +27,7 @@ export default function Home() {
         <AISection t={t} />
         <WhoSection t={t} />
         <CustomerSection t={t} />
+        <EstablishmentSection t={t} />
       </main>
     </>
   );
