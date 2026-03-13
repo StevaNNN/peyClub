@@ -1,10 +1,11 @@
 import { FC } from "react";
 import { LocaleDictionary } from "@/app/lib/i18n/types";
 import Image from "next/image";
-import Logo from "@/app/resources/logo.svg";
 import LogoSmall from "@/app/resources/logo-small.svg";
 import Link from "next/link";
 import Text from "@/app/components/Text";
+
+import FooterLogo from "./FooterLogo";
 
 export interface FooterSectionProps {
   t: LocaleDictionary;
@@ -24,7 +25,7 @@ const FooterSection: FC<FooterSectionProps> = ({ t }) => {
     <footer className="section footer-section">
       <div className="section-inner v-box">
         <div className="section-top ">
-          <Image src={Logo} alt="PeyClub Logo" />
+          <FooterLogo t={t} />
           <div className="h-box info-data">
             <div className="v-box list">
               <Text fontSize="lg" fontThickness="bold" htmlElement="h3">

@@ -415,8 +415,8 @@ const Icon: FC<IconProps> = ({
                 y2="28.5"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#A0D4FF" />
-                <stop offset="1" stop-color="#9CFFCF" />
+                <stop stopColor="#A0D4FF" />
+                <stop offset="1" stopColor="#9CFFCF" />
               </linearGradient>
             </defs>
           </>
