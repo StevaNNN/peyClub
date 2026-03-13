@@ -37,6 +37,7 @@ export interface TextProps {
 
 const sfRegular = localFont({ src: "../resources/fonts/sf.ttf" });
 const sfItalic = localFont({ src: "../resources/fonts/sf-italic.ttf" });
+const sfBold = localFont({ src: "../resources/fonts/sf-bold.otf" });
 
 const linecaRegular = localFont({
   src: "../resources/fonts/lineca-regular.ttf",
@@ -56,6 +57,7 @@ const Text: FC<TextProps & PropsWithChildren> = ({
 }) => {
   const getFontClassName = () => {
     if (fontVariant === "sf") {
+      if (fontThickness === "bold") return sfBold.className;
       return fontStyle === "italic" ? sfItalic.className : sfRegular.className;
     }
 

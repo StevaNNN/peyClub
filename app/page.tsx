@@ -1,18 +1,19 @@
 import "./styles/main.scss";
 
 import { Suspense } from "react";
-import Header from "./components/Header";
-import { resolveLocale } from "./lib/i18n/locale";
-import en from "./lib/i18n/en/en";
-import sr from "./lib/i18n/sr/sr";
-import HeroSection from "./sections/hero/HeroSection";
-import WhatSection from "./sections/what/WhatSection";
-import AISection from "./sections/ai/AISection";
-import WhoSection from "./sections/who/WhoSection";
-import CustomerSection from "./sections/customer/CustomerSection";
-import EstablishmentSection from "./sections/establishment/EstablishmentSection";
-import { CounterSection } from "./sections/counter/CounterSection";
-import CapabilitiesSection from "./sections/capatabilities/CapatabilitiesSection";
+import Header from "@/app/components/Header";
+import { resolveLocale } from "@/app/lib/i18n/locale";
+import en from "@/app/lib/i18n/en/en";
+import sr from "@/app/lib/i18n/sr/sr";
+import HeroSection from "@/app/sections/hero/HeroSection";
+import WhatSection from "@/app/sections/what/WhatSection";
+import AISection from "@/app/sections/ai/AISection";
+import WhoSection from "@/app/sections/who/WhoSection";
+import CustomerSection from "@/app/sections/customer/CustomerSection";
+import EstablishmentSection from "@/app/sections/establishment/EstablishmentSection";
+import { CounterSection } from "@/app/sections/counter/CounterSection";
+import CapabilitiesSection from "@/app/sections/capatabilities/CapatabilitiesSection";
+import FooterSection from "@/app/sections/footer/FooterSection";
 
 export default function Home() {
   const locale = resolveLocale();
@@ -33,7 +34,7 @@ export default function Home() {
         <CounterSection t={t} />
         <CapabilitiesSection t={t} />
       </main>
-      <footer></footer>
+      <FooterSection t={t} />
     </>
   );
 }

@@ -34,4 +34,8 @@
       grid-template-columns: repeat(1, minmax(32rem, 1fr));
     }
   }
+
+  .animate-button {
+    align-self: center;
+  }
 }

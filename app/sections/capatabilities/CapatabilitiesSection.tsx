@@ -1,6 +1,8 @@
+import Button from "@/app/components/Button";
 import Icon from "@/app/components/Icon";
 import Text from "@/app/components/Text";
 import { LocaleDictionary } from "@/app/lib/i18n/types";
+import { routes } from "@/app/routes";
 import { FC } from "react";
 
 export interface CapabilitiesSectionProps {
@@ -53,7 +55,7 @@ const CapabilitiesSection: FC<CapabilitiesSectionProps> = ({ t }) => {
         <div className="section-cards h-box flex-wrap">
           {cardsData(t).map((c, i) => {
             return (
-              <div className="h-box card flex-1">
+              <div className="h-box card flex-1" key={i}>
                 <Icon name="check" />
                 <Text fontSize="md">
                   <Text
@@ -69,6 +71,15 @@ const CapabilitiesSection: FC<CapabilitiesSectionProps> = ({ t }) => {
             );
           })}
         </div>
+        <Button
+          className="animate-button"
+          href={routes.contact}
+          size="md"
+          variant={"dark"}
+        >
+          <Text htmlElement="span">{t.heroSection.actionBtnText}</Text>
+          <Icon name="arrow-right" width={20} height={20} color="#fff" />
+        </Button>
       </div>
     </section>
   );

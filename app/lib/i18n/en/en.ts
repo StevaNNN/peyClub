@@ -163,6 +163,33 @@ const en = {
       text: "prevents disputes; Reviews: Voice → spoken feedback becomes structured scores routed to the right team + training AI generation",
     },
   },
+  footer: {
+    productsTitle: "Products",
+    products: [
+      "Pey OPS",
+      "Pey Insights",
+      "Pey Connect",
+      "Pey Pay",
+      "Pey Order",
+      "Pey Copilot",
+    ],
+    contact: {
+      title: "Contact",
+      info: [
+        {
+          street: "45 Lansing Street, San Francisco CA 94105, USA",
+        },
+        { number: "+1 1234 5678" },
+        { email: "office@peyclub.com" },
+      ],
+    },
+    links: [
+      "© Copyright 2026 by PeyClub",
+      "Privacy & Cookie Policy",
+      "Terms & Conditions",
+      "All Rights Reserved",
+    ],
+  },
 };
 
 export default en;

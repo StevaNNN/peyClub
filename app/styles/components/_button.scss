@@ -120,4 +120,28 @@ $button-animation: all 300ms ease-in-out !default;
 .#{$prefix}btn--dark {
   background-color: $text-color-primary;
   color: $text-color-inverse;
+
+  svg {
+    z-index: 2;
+  }
+
+  .#{$prefix}text {
+    color: $text-color-inverse;
+  }
+
+  &:hover {
+    background-color: transparent;
+
+    .#{$prefix}text {
+      color: $text-color-primary;
+    }
+
+    &::after {
+      z-index: 1 !important;
+    }
+  }
+
+  &::after {
+    background-color: $text-color-primary;
+  }
 }
