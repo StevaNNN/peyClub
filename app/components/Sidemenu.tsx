@@ -15,6 +15,7 @@ export interface SidemenuProps {
   onActiveChange: (hash: string) => void;
   isClosing: boolean;
   t: LocaleDictionary;
+  locale: string;
   onClose: () => void;
 }
 
@@ -26,6 +27,7 @@ const Sidemenu: FC<SidemenuProps> = ({
   onActiveChange,
   isClosing,
   t,
+  locale,
   onClose,
 }) => {
   const handleMenuClick = (e: any) => e.stopPropagation();
@@ -42,7 +44,7 @@ const Sidemenu: FC<SidemenuProps> = ({
     >
       <div className="p-aside-menu v-box" onClick={handleMenuClick}>
         <div className="p-aside-header align-items-center justify-content-between h-box">
-          <Logo ariaLabel={t.header.logo} />
+          <Logo locale={locale} ariaLabel={t.header.logo} />
           <button type="button" className="p-ham-nav" onClick={onClose}>
             <Icon name="close" />
           </button>

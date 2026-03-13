@@ -15,7 +15,7 @@ export default async function Contact({
 
   return (
     <section className="v-box">
-      <div className="connect-section">
+      <div className="section connect-section">
         <div className="connect-section-info v-box">
           <Text htmlElement="h1" fontSize="4xl" fontThickness="bold">
             {t.contactPage.title}

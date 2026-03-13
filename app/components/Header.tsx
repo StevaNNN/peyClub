@@ -116,6 +116,7 @@ const Header: FC<HeaderProps> = ({ locale, t }) => {
           onActiveChange={scrollToSection}
           isClosing={sidemenu.isClosing}
           t={t}
+          locale={locale}
           onClose={sidemenu.close}
         />
       )}

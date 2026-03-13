@@ -10,20 +10,29 @@
   border-bottom-right-radius: 2.4rem;
 
   @include respond-below(lg) {
-    padding: 11rem 0;
+    padding: 12.4rem 6.4rem 0;
   }
 
   @include respond-below(md) {
+    padding-left: 4rem;
+
     h1 {
       font-size: 4.8rem;
     }
   }
 
-  @include respond-below(sm) {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+  @include respond-below(600) {
+    padding-bottom: 0 !important;
   }
 
-  @include respond-below(xs) {
+  @include respond-below(sm) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    justify-items: center;
+    padding-left: 6.4rem;
+    gap: 11rem;
+  }
+
+  @include respond-below(600) {
     padding: 8rem 2rem 0;
 
     h1 {
@@ -56,6 +65,13 @@
       background-image: url("../../resources/graphics/contanctGraphic.png");
       background-position: right;
       background-size: cover;
+
+      @include respond-below(600) {
+        width: calc(100% + 3.2rem);
+        height: calc(100% + 3.2rem);
+        left: -1.6rem;
+        top: -1.6rem;
+      }
     }
 
     &::before {
@@ -71,6 +87,9 @@
       pointer-events: none;
     }
 
+    @include respond-below(600) {
+    }
+
     .animate-button {
       align-self: flex-start;
     }
@@ -80,17 +99,12 @@
     max-width: 40rem;
     gap: 4rem;
 
-    @include respond-above(1440) {
-      justify-self: center;
-    }
-
     @include respond-below(md) {
       max-width: 30rem;
     }
 
     @include respond-below(sm) {
       max-width: 36rem;
-      justify-self: center;
     }
   }
 }
