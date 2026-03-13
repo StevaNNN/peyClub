@@ -4,38 +4,46 @@ import { useCallback, useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 const HEADER_HEIGHT = 140;
+const SECTION_RATIO = 2.5;
 
-const toSlug = (item: string) => item.toLowerCase().replaceAll(" ", "-");
-
-const isSectionVisible = (el: HTMLElement): boolean => {
-  const { top, bottom } = el.getBoundingClientRect();
-  const viewTop = HEADER_HEIGHT;
-  const viewBottom = window.innerHeight;
-  return bottom > viewTop && top < viewBottom;
+const isSectionInView = (el: HTMLElement): boolean => {
+  const threshold =
+    window.innerHeight - window.innerHeight / SECTION_RATIO + HEADER_HEIGHT;
+  const elTop = el.getBoundingClientRect().top;
+  return elTop <= threshold;
 };
 
-export const useActiveSection = (navItems: string[], locale: string) => {
+export const useActiveSection = (
+  sectionIds: readonly string[],
+  locale: string,
+) => {
   const [activeHash, setActiveHash] = useState("");
-  const sectionIds = navItems.map(toSlug);
   const router = useRouter();
   const pathname = usePathname();
 
   useEffect(() => {
-    const allIds = [...sectionIds, "counter"];
-
     const onScroll = () => {
       let activeId = "";
 
-      for (const id of allIds) {
+      for (const id of sectionIds) {
         const el = document.getElementById(id);
+
         if (!el) continue;
 
-        if (isSectionVisible(el)) {
+        if (isSectionInView(el)) {
           el.classList.add("in-view");
-          if (sectionIds.includes(id)) activeId = id;
+          activeId = id;
         } else {
           el.classList.remove("in-view");
         }
+      }
+
+      const d = document.getElementById("counter");
+      if (!d) return;
+      if (isSectionInView(d)) {
+        d.classList.add("in-view");
+      } else {
+        d.classList.remove("in-view");
       }
 
       setActiveHash(activeId);

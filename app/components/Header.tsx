@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { FC } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { routes } from "../routes";
+import { routes, NAV_SECTION_IDS } from "../routes";
 import { useActiveSection } from "../hooks/useActiveSection";
 import { useSidemenu } from "../hooks/useSidemenu";
 import { Locale } from "../lib/i18n/locale";
@@ -19,12 +19,10 @@ export interface HeaderProps {
   t: LocaleDictionary;
 }
 
-const toSlug = (item: string) => item.toLowerCase().replaceAll(" ", "-");
-
 const Header: FC<HeaderProps> = ({ locale, t }) => {
   const navItems = t.header.nav.slice(0, 6);
   const { activeHash, scrollToSection, scrollToTop } = useActiveSection(
-    navItems,
+    NAV_SECTION_IDS,
     locale,
   );
   const sidemenu = useSidemenu();
@@ -39,6 +37,10 @@ const Header: FC<HeaderProps> = ({ locale, t }) => {
     router.push(segments.join("/"));
   };
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    scrollToTop(e);
+  };
+
   return (
     <>
       <header className="p-header h-box align-items-center">
@@ -46,7 +48,7 @@ const Header: FC<HeaderProps> = ({ locale, t }) => {
           <Logo
             locale={locale}
             ariaLabel={t.header.logo}
-            onClick={scrollToTop}
+            onClick={handleLogoClick}
           />
         </div>
 
@@ -54,11 +56,11 @@ const Header: FC<HeaderProps> = ({ locale, t }) => {
           className="p-header__nav h-box align-items-center justify-content-center"
           aria-label={t.header.navBar}
         >
-          {navItems.map((item) => {
-            const slug = toSlug(item);
+          {navItems.map((item, i) => {
+            const slug = NAV_SECTION_IDS[i];
             return (
               <Link
-                key={item}
+                key={slug}
                 href={`/${locale}/#${slug}`}
                 className={`h-box align-items-center justify-content-center p-header__nav-link${activeHash === slug ? " active" : ""}`}
                 onClick={(e) => {

@@ -7,6 +7,7 @@ export interface ButtonProps {
   className?: string;
   size?: "sm" | "md";
   variant?: "outline" | "brand" | "dark";
+  onClick?: () => void;
 }
 
 const Button: FC<ButtonProps & PropsWithChildren> = ({
@@ -15,6 +16,7 @@ const Button: FC<ButtonProps & PropsWithChildren> = ({
   size = "md",
   variant = "brand",
   children,
+  onClick,
 }) => {
   const buttonCls = clsx(
     "d-i-flex",
@@ -27,7 +29,7 @@ const Button: FC<ButtonProps & PropsWithChildren> = ({
   );
 
   return (
-    <Link href={href} className={buttonCls}>
+    <Link href={href} className={buttonCls} onClick={onClick}>
       {children}
     </Link>
   );

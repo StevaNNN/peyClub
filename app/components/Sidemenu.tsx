@@ -6,7 +6,7 @@ import Text from "./Text";
 import Logo from "./Logo";
 import Icon from "./Icon";
 import Button from "./Button";
-import { routes } from "../routes";
+import { routes, NAV_SECTION_IDS } from "../routes";
 import { LocaleDictionary } from "../lib/i18n/types";
 
 export interface SidemenuProps {
@@ -18,8 +18,6 @@ export interface SidemenuProps {
   locale: string;
   onClose: () => void;
 }
-
-const toSlug = (item: string) => item.toLowerCase().replaceAll(" ", "-");
 
 const Sidemenu: FC<SidemenuProps> = ({
   items,
@@ -36,6 +34,9 @@ const Sidemenu: FC<SidemenuProps> = ({
     onActiveChange(slug);
     onClose();
   };
+  const handleNavToContact = () => {
+    onClose();
+  };
 
   return (
     <aside
@@ -44,17 +45,17 @@ const Sidemenu: FC<SidemenuProps> = ({
     >
       <div className="p-aside-menu v-box" onClick={handleMenuClick}>
         <div className="p-aside-header align-items-center justify-content-between h-box">
-          <Logo locale={locale} ariaLabel={t.header.logo} />
+          <Logo locale={locale} ariaLabel={t.header.logo} onClick={onClose} />
           <button type="button" className="p-ham-nav" onClick={onClose}>
             <Icon name="close" />
           </button>
         </div>
         <nav className="p-aside-menu-nav v-box align-items-end">
-          {items.map((item) => {
-            const slug = toSlug(item);
+          {items.map((item, i) => {
+            const slug = NAV_SECTION_IDS[i];
             return (
               <Link
-                key={item}
+                key={slug}
                 href={`/${locale}/#${slug}`}
                 className={`h-box align-items-center p-aside-menu-nav-link${activeHash === slug ? " active" : ""}`}
                 onClick={(e) => handleLinkClick(slug, e)}
@@ -71,6 +72,7 @@ const Sidemenu: FC<SidemenuProps> = ({
           href={`/${locale}${routes.contact}`}
           size="md"
           variant={"brand"}
+          onClick={handleNavToContact}
         >
           <Text htmlElement="span">{t.header.contact}</Text>
           <Icon name="arrow-right" width={20} height={20} color="#fff" />

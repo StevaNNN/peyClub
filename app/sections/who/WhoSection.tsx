@@ -42,7 +42,7 @@ const splitTitleByAmpersand = (title: string) => {
 
 const WhoSection: FC<WhoSectionProps> = ({ t }) => {
   return (
-    <section className="section who-section v-box" id="who-it’s-for">
+    <section className="section who-section v-box" id="who-its-for">
       <div className="section-inner v-box">
         <div className="v-box section-header">
           <Text
