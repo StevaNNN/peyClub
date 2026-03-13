@@ -6,167 +6,172 @@ const sr: LocaleDictionary = {
     logo: "PeyClub",
     navBar: "Navigacioni meni",
     nav: [
-      "Sta mi radimo",
+      "Šta radimo",
       "AI 360°",
       "Za koga je",
       "Put kupca",
-      "Put ugostiteljskog objekta",
-      "Kljucne kompatabilnosti",
+      "Put objekta",
+      "Ključne mogućnosti",
     ],
     contact: "Kontakt",
     localeOption1: "EN",
     localeOption2: "SR",
-    selectLabel: "Izaberi jezik",
+    selectLabel: "Izaberite jezik",
   },
   heroSection: {
-    imagAlt: "Hero image",
-    heroText1: "Redefining hospitality trough ",
-    heroText2: "fast payements and AI inteligence",
+    imagAlt: "Hero slika",
+    heroText1: "Redefinišemo ugostiteljstvo kroz",
+    heroText2: "brza plaćanja i AI inteligenciju",
     heroParagprah:
-      "PeyClub helps restaurants and on-premise businesses move faster with AI-powered ordering, instant payments, and real-time insights — all in one platform.",
-    actionBtnText: "Request demo",
+      "PeyClub pomaže restoranima i ugostiteljskim objektima da rade brže uz AI naručivanje, trenutna plaćanja i uvide u realnom vremenu — sve na jednoj platformi.",
+    actionBtnText: "Zatraži demo",
   },
   whatSection: {
-    title: "What we do",
+    title: "Šta radimo",
     paragraph:
-      "PeyClub transforms every payment into a fast, intelligent interaction — boosting revenue,speeding service, and delighting customers with AI.",
-    firstCardTitle: "Fast Ordering",
+      "PeyClub pretvara svako plaćanje u brzu, inteligentnu interakciju — povećava prihode, ubrzava uslugu i oduševljava goste pomoću AI.",
+    firstCardTitle: "Brzo naručivanje",
     firstCardParagraph:
-      "QR, voice, or text ordering with personalized recommendations, allergen awareness, and smart add-ons.",
-    secondCardTitle: "Fast Payment",
+      "QR, glasovno ili tekstualno naručivanje sa personalizovanim preporukama, upozorenjima na alergene i pametnim dodacima.",
+    secondCardTitle: "Brzo plaćanje",
     secondCardParagraph:
-      "Instant, contactless checkout with Apple Pay and Google Pay — including easy split, tip, and digital receipts.",
-    thirdCardTitle: "AI Powered",
+      "Trenutno, beskontaktno plaćanje putem Apple Pay i Google Pay — uključujući jednostavno deljenje računa, napojnice i digitalne račune.",
+    thirdCardTitle: "AI tehnologija",
     thirdCardParagraph:
-      "Real-time operational insights, customer feedback intelligence, and data-driven optimization.",
+      "Operativni uvidi u realnom vremenu, inteligencija povratnih informacija gostiju i optimizacija zasnovana na podacima.",
   },
   aiSection: {
     title: "AI 360°",
     paragraph:
-      "One Intelligence Layer. Every Role Connected. Management. Kitchen. Servers. Guests. All connected in real time. AI 360° transforms hospitality from reactive to predictive — aligning every role around one goal: higher satisfaction, faster service, smarter growth.",
-    firstCardTitle: "Customer",
-    firstCardListHeader: "Personalized. Effortless. Instant",
+      "Jedan sloj inteligencije. Svaka uloga povezana. Menadžment. Kuhinja. Konobari. Gosti. Svi povezani u realnom vremenu. AI 360° transformiše ugostiteljstvo iz reaktivnog u prediktivno — usklađujući svaku ulogu oko jednog cilja: veće zadovoljstvo, brža usluga, pametniji rast.",
+    firstCardTitle: "Gost",
+    firstCardListHeader: "Personalizovano. Bez napora. Trenutno.",
     firstCardListItems: [
-      "Voice & text AI ordering",
-      "Allergen & nutrition reasoning",
-      "One-tap Apple/Google Pay",
+      "Glasovno i tekstualno AI naručivanje",
+      "Razumevanje alergena i nutritivnih vrednosti",
+      "Plaćanje jednim dodirom putem Apple/Google Pay",
     ],
-    secondCardTitle: "Servers",
-    secondCardListHeader: "Guided in real time.",
+    secondCardTitle: "Konobari",
+    secondCardListHeader: "Vođeni u realnom vremenu.",
     secondCardListItems: [
-      "Instant allergen answers.",
-      "Real-time pairing prompts.",
-      "Live payment notifications.",
+      "Trenutni odgovori o alergenima.",
+      "Preporuke za uparivanje u realnom vremenu.",
+      "Obaveštenja o plaćanjima uživo.",
     ],
-    thirdCardTitle: "Management",
-    thirdCardListHeader: "From insight to action. Instantly.",
-    thirdCardListItems: ["Ask in plain language.", "Get real-time answers."],
-    fourthCardTitle: "Kitchen",
-    fourthCardListHeader: "Predictive. Precise. Efficient.",
+    thirdCardTitle: "Menadžment",
+    thirdCardListHeader: "Od uvida do akcije. Trenutno.",
+    thirdCardListItems: [
+      "Pitajte na prirodnom jeziku.",
+      "Dobijte odgovore u realnom vremenu.",
+    ],
+    fourthCardTitle: "Kuhinja",
+    fourthCardListHeader: "Prediktivno. Precizno. Efikasno.",
     fourthCardListItems: [
-      "AI anticipates demand.",
-      "Balances station load.",
-      "Guides substitutions.",
-      "Optimizes sell-through.",
+      "AI predviđa potražnju.",
+      "Balansira opterećenje stanica.",
+      "Vodi supstitucije.",
+      "Optimizuje prodaju.",
     ],
   },
   whoSection: {
-    title: "Who It's For",
-    paragraph: "Built for any business where speed and experience matter.",
-    slide1Title: "Restaurants & Cafes",
+    title: "Za koga je",
+    paragraph: "Napravljeno za svaki biznis gde su brzina i iskustvo bitni.",
+    slide1Title: "Restorani i kafići",
     slide1FlipText:
-      "Reduce ordering and payment time by up to 30-40%, increase table turnover, and let staff focus on service instead of transactions.",
-    slide2Title: "Bars & Nightlife",
+      "Smanjite vreme naručivanja i plaćanja do 30-40%, povećajte obrt stolova i omogućite osoblju da se fokusira na uslugu umesto na transakcije.",
+    slide2Title: "Barovi i noćni život",
     slide2FlipText:
-      "Enable faster drink ordering, instant payment, and smoother peak-hour operations with fewer queues and missed orders.",
-    slide3Title: "Stadium & Arenas",
+      "Omogućite brže naručivanje pića, trenutno plaćanje i glatkiji rad u špicu sa manje redova i propuštenih narudžbina.",
+    slide3Title: "Stadioni i arene",
     slide3FlipText:
-      "Handle high-volume ordering and payments during peak moments while reducing queues and increasing completed transactions.",
-    slide4Title: "Hotels & Resorts",
+      "Upravljajte velikim obimom narudžbina i plaćanja tokom vršnih trenutaka uz smanjenje redova i povećanje završenih transakcija.",
+    slide4Title: "Hoteli i rizorti",
     slide4FlipText:
-      "Simplify on-property ordering and payments across restaurants, bars, pools, and room services — all from one platform.",
+      "Pojednostavite naručivanje i plaćanja u okviru objekta — restorani, barovi, bazeni i sobna usluga — sve sa jedne platforme.",
   },
   customerSection: {
-    title: "Customer Journey",
-    paragraph: "AI guiding every moment of the guest experience.",
-
+    title: "Put kupca",
+    paragraph: "AI vodi svaki trenutak iskustva gosta.",
     slide1: {
-      title: "Seat & Scan",
+      title: "Sedi i skeniraj",
       paragraph:
-        "From seat to menu in seconds. Customers simply scan the QR code at the table or venue and instantly access PeyClub — no app download, no friction, no waiting.",
+        "Od sedišta do menija za nekoliko sekundi. Gosti jednostavno skeniraju QR kod za stolom ili u objektu i odmah pristupaju PeyClub-u — bez preuzimanja aplikacije, bez zastoja, bez čekanja.",
     },
     slide2: {
-      title: "Decide",
+      title: "Odluči",
       paragraph:
-        "Smart decisions, guided by AI. Guests can ask PeyClub questions by voice or text about preferences, allergens, calories, or budget, helping them quickly decide what fits their needs.",
+        "Pametne odluke, vođene AI-jem. Gosti mogu pitati PeyClub glasom ili tekstom o preferencijama, alergenima, kalorijama ili budžetu, pomažući im da brzo odluče šta im odgovara.",
     },
     slide3: {
-      title: "Dine & Add",
+      title: "Jedi i dodaj",
       paragraph:
-        "Order more, without interruption. Customers can add drinks or desserts anytime during the experience using quick voice prompts — no need to flag down staff.",
+        "Naruči još, bez prekida. Gosti mogu dodati piće ili desert u bilo kom trenutku koristeći brze glasovne komande — bez potrebe da dozivaju osoblje.",
     },
     slide4: {
-      title: "Pay",
+      title: "Plati",
       paragraph:
-        "Instant, secure checkout. With one tap, customers pay using Apple Pay or Google Pay, split the bill if needed, and add tips seamlessly.",
+        "Trenutna, sigurna naplata. Jednim dodirom, gosti plaćaju putem Apple Pay ili Google Pay, dele račun po potrebi i ostavljaju napojnicu bez problema.",
     },
   },
   establishmentSection: {
-    title: "Establishment Journey",
-    paragraph: "Where intelligence becomes performance.",
+    title: "Put objekta",
+    paragraph: "Gde inteligencija postaje performans.",
     slide1: {
-      title: "Understand",
+      title: "Razumej",
       paragraph:
-        "Decode guest behavior with AI. AI captures preferences, spending patterns, allergens, feedback sentiment, ordering habits and timing.",
+        "Dekodirajte ponašanje gostiju pomoću AI. AI prikuplja preferencije, obrasce potrošnje, alergene, sentiment povratnih informacija, navike naručivanja i tajming.",
     },
     slide2: {
-      title: "Optimize",
+      title: "Optimizuj",
       paragraph:
-        "Turn intelligence into coordinated action. AI transforms behavioral insights into real-time operational guidance. It adjusts upsell prompts, prioritizes menu items, balances kitchen load, and supports staff decisions as service unfolds.",
+        "Pretvorite inteligenciju u koordinisanu akciju. AI transformiše uvide u ponašanje u operativno vođenje u realnom vremenu. Prilagođava predloge za upsell, prioritizuje stavke menija, balansira opterećenje kuhinje i podržava odluke osoblja dok se usluga odvija.",
     },
     slide3: {
-      title: "Predict",
+      title: "Predvidi",
       paragraph:
-        "Anticipate demand before it impacts operations. AI analyzes patterns across orders, timing, inventory flow, and guest behavior to forecast table turns, staffing needs, and sell-through performance.",
+        "Predvidite potražnju pre nego što utiče na operacije. AI analizira obrasce narudžbina, tajming, tok inventara i ponašanje gostiju kako bi predvideo obrt stolova, potrebe za osobljem i performanse prodaje.",
     },
     slide4: {
-      title: "Grow",
+      title: "Rasti",
       paragraph:
-        "Convert intelligence into measurable growth. AI continuously refines pricing dynamics, loyalty triggers, offer timing, and experience personalization to increase revenue per guest, improve retention, and protect margins.",
+        "Pretvorite inteligenciju u merljiv rast. AI kontinuirano usavršava dinamiku cena, okidače lojalnosti, tajming ponuda i personalizaciju iskustva kako bi povećao prihod po gostu, poboljšao retenciju i zaštitio marže.",
     },
   },
   counterSection: {
-    text1: "Payment Per Check",
-    text2: "Daily Revenue",
-    text3: "More tips",
-    text4: "Completed Orders",
+    text1: "Plaćanje po računu",
+    text2: "Dnevni prihod",
+    text3: "Više napojnica",
+    text4: "Završene narudžbine",
   },
   capabilities: {
-    title: "Key Capatabilities",
-    paragraph: "From ordering to payment to real-time operational insight.",
+    title: "Ključne mogućnosti",
+    paragraph:
+      "Od naručivanja do plaćanja do operativnih uvida u realnom vremenu.",
     card1: {
-      boldText: "AI Powered",
-      text: "Flexible Ultra-Fast Payment Solution via Text or Voice",
+      boldText: "AI tehnologija",
+      text: "Fleksibilno ultra-brzo rešenje za plaćanje putem teksta ili glasa",
     },
     card2: {
-      boldText: "AI Menu Intelligence",
-      text: "voice/text ordering; allergens, calories, budget fit",
+      boldText: "AI inteligencija menija",
+      text: "glasovno/tekstualno naručivanje; alergeni, kalorije, prilagođeno budžetu",
     },
     card3: {
-      boldText: "Manager Goals → AI System Actions",
-      text: "“Push halibut before 9pm; offer bottle to 4+” Server AI Copilot— instant Q&A, pairings, timely upsell prompts",
+      boldText: "Ciljevi menadžera → AI sistemske akcije",
+      text:
+        "„Guraj halibut pre 21h; ponudi flašu za 4+" +
+        "AI Kopilot za konobare — trenutna pitanja i odgovori, uparivanja, pravovremeni upsell predlozi",
     },
     card4: {
-      boldText: "Real-time AI Ops IQ",
-      text: "“How many specials left?” “Who hasn`t had dessert?”",
+      boldText: "AI operativni IQ u realnom vremenu",
+      text: "„Koliko specijaliteta je ostalo?" + "„Ko nije naručio desert?",
     },
     card5: {
-      boldText: "Checkout Guardrails: AI line-item verification",
-      text: "prevents disputes; Reviews: Voice → spoken feedback becomes structured scores routed to the right team + training AI generation",
+      boldText: "Zaštita naplate: AI verifikacija stavki",
+      text: "sprečava sporove; Recenzije: Glas → govorne povratne informacije postaju strukturirani rezultati usmereni pravom timu + AI generisanje obuke",
     },
   },
   footer: {
-    productsTitle: "Products",
+    productsTitle: "Proizvodi",
     products: [
       "Pey OPS",
       "Pey Insights",
@@ -176,7 +181,7 @@ const sr: LocaleDictionary = {
       "Pey Copilot",
     ],
     contact: {
-      title: "Contact",
+      title: "Kontakt",
       info: [
         {
           street: "45 Lansing Street, San Francisco CA 94105, USA",
@@ -186,11 +191,21 @@ const sr: LocaleDictionary = {
       ],
     },
     links: [
-      "© Copyright 2026 by PeyClub",
-      "Privacy & Cookie Policy",
-      "Terms & Conditions",
-      "All Rights Reserved",
+      "© Copyright 2026 PeyClub",
+      "Politika privatnosti i kolačića",
+      "Uslovi korišćenja",
+      "Sva prava zadržana",
     ],
+  },
+  contactPage: {
+    title: "Kako vam možemo pomoći?",
+    paragraph:
+      "Željni smo da čujemo vaše mišljenje! Bilo da imate pitanja ili vam je potrebna pomoć, naš posvećeni tim je tu da pruži vrhunsku podršku. Hvala što ste nam se obratili!",
+    name: "Ime i prezime",
+    email: "Email",
+    phoneNumber: "Broj telefona",
+    message: "Napišite vaš upit ovde",
+    submitBtn: "Pošalji",
   },
 };
 

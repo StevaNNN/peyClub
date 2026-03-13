@@ -1,8 +1,9 @@
-import { createElement, FC, PropsWithChildren } from "react";
+import { AllHTMLAttributes, createElement, FC, PropsWithChildren } from "react";
 import localFont from "next/font/local";
 import clsx from "clsx";
 
 type TextSize =
+  | "xxs"
   | "xs"
   | "sm"
   | "md"
@@ -14,6 +15,7 @@ type TextSize =
   | "5xl";
 
 const textSizeClassByKey: Record<TextSize, string> = {
+  xxs: "p-text-xxs",
   xs: "p-text-xs",
   sm: "p-text-sm",
   md: "p-text-md",
@@ -25,7 +27,10 @@ const textSizeClassByKey: Record<TextSize, string> = {
   "5xl": "p-text-5xl",
 };
 
-export interface TextProps {
+export interface TextProps extends Omit<
+  AllHTMLAttributes<HTMLElement>,
+  "className"
+> {
   htmlElement?: string;
   className?: string;
   fontThickness?: "bold" | "regular" | "book";
@@ -54,6 +59,7 @@ const Text: FC<TextProps & PropsWithChildren> = ({
   className = "",
   textGradient = false,
   fontSize = "sm",
+  ...rest
 }) => {
   const getFontClassName = () => {
     if (fontVariant === "sf") {
@@ -81,7 +87,7 @@ const Text: FC<TextProps & PropsWithChildren> = ({
       "p-text-default": !textGradient,
     },
   );
-  return createElement(htmlElement, { className: textCls, children });
+  return createElement(htmlElement, { className: textCls, ...rest }, children);
 };
 
 export default Text;

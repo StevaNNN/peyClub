@@ -5,6 +5,7 @@
 @use "components/sidemenu";
 @use "components/text";
 @use "components/slider";
+@use "components/input";
 @use "sections/hero";
 @use "sections/what-we-do";
 @use "sections/ai";
@@ -14,6 +15,7 @@
 @use "sections/counter";
 @use "sections/capabilities";
 @use "sections/footer";
+@use "sections/connect";
 
 html {
   font-size: 62.5%;

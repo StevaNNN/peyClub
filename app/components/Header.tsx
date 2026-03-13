@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { FC } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { routes } from "../routes";
 import { useActiveSection } from "../hooks/useActiveSection";
 import { useSidemenu } from "../hooks/useSidemenu";
@@ -23,27 +23,31 @@ const toSlug = (item: string) => item.toLowerCase().replaceAll(" ", "-");
 
 const Header: FC<HeaderProps> = ({ locale, t }) => {
   const navItems = t.header.nav.slice(0, 6);
-  const { activeHash, scrollToSection, scrollToTop } =
-    useActiveSection(navItems);
+  const { activeHash, scrollToSection, scrollToTop } = useActiveSection(
+    navItems,
+    locale,
+  );
   const sidemenu = useSidemenu();
 
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   const handleLocaleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const nextLocale = event.target.value as Locale;
-    document.cookie = `NEXT_LOCALE=${nextLocale}; path=/; max-age=31536000; samesite=lax`;
-    const params = new URLSearchParams(searchParams.toString());
-    params.set("locale", nextLocale);
-    router.push(`${pathname}?${params.toString()}`);
+    const segments = pathname.split("/");
+    segments[1] = nextLocale;
+    router.push(segments.join("/"));
   };
 
   return (
     <>
       <header className="p-header h-box align-items-center">
         <div className="p-header__left justify-content-start h-box">
-          <Logo ariaLabel={t.header.logo} onClick={scrollToTop} />
+          <Logo
+            locale={locale}
+            ariaLabel={t.header.logo}
+            onClick={scrollToTop}
+          />
         </div>
 
         <nav
@@ -55,7 +59,7 @@ const Header: FC<HeaderProps> = ({ locale, t }) => {
             return (
               <Link
                 key={item}
-                href={`/#${slug}`}
+                href={`/${locale}/#${slug}`}
                 className={`h-box align-items-center justify-content-center p-header__nav-link${activeHash === slug ? " active" : ""}`}
                 onClick={(e) => {
                   e.preventDefault();
@@ -85,7 +89,7 @@ const Header: FC<HeaderProps> = ({ locale, t }) => {
             </select>
           </div>
           <Button
-            href={routes.contact}
+            href={`/${locale}${routes.contact}`}
             size="sm"
             variant="outline"
             className="animate-button"

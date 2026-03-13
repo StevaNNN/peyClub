@@ -190,6 +190,16 @@ const en = {
       "All Rights Reserved",
     ],
   },
+  contactPage: {
+    title: "How can we help you?",
+    paragraph:
+      "We're eager to hear from you! Whether you have questions or need assistance, our dedicated team is here to provide top-notch support. Thank you for reaching out!",
+    name: "Full name",
+    email: "Email",
+    phoneNumber: "Phone number",
+    message: "Write your query here",
+    submitBtn: "Submit",
+  },
 };
 
 export default en;

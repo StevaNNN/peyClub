@@ -67,19 +67,19 @@ const FooterSection: FC<FooterSectionProps> = ({ t }) => {
             </div>
           </div>
         </div>
-        <div className="section-bottom h-box">
-          {t.footer.links.map((link, index) => (
-            <Link
-              key={index}
-              href="#"
-              className="d-i-flex align-items-center justify-content-center"
-            >
-              <Text fontSize="xs">{link}</Text>
-            </Link>
-          ))}
-          <div className="flex-1 h-box justify-content-end">
-            <Image src={LogoSmall} alt="PeyClub Logo Small" />
-          </div>
+      </div>
+      <div className="section-bottom h-box">
+        {t.footer.links.map((link, index) => (
+          <Link
+            key={index}
+            href="#"
+            className="d-i-flex align-items-center justify-content-center"
+          >
+            <Text fontSize="xs">{link}</Text>
+          </Link>
+        ))}
+        <div className="flex-1 h-box justify-content-end">
+          <Image src={LogoSmall} alt={t.header.logo} />
         </div>
       </div>
     </footer>

@@ -1,9 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 const HEADER_HEIGHT = 140;
-const SECTION_RATIO = 1.5; // smaller ratio flags in-view sooner
+const SECTION_RATIO = 1.5;
 
 const toSlug = (item: string) => item.toLowerCase().replaceAll(" ", "-");
 
@@ -13,9 +14,11 @@ const isSectionInView = (el: HTMLElement): boolean => {
   return el.getBoundingClientRect().top <= threshold;
 };
 
-export const useActiveSection = (navItems: string[]) => {
+export const useActiveSection = (navItems: string[], locale: string) => {
   const [activeHash, setActiveHash] = useState("");
   const sectionIds = navItems.map(toSlug);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => {
@@ -52,11 +55,18 @@ export const useActiveSection = (navItems: string[]) => {
     setActiveHash(slug);
   }, []);
 
-  const scrollToTop = useCallback((e: React.MouseEvent) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    setActiveHash("");
-  }, []);
+  const scrollToTop = useCallback(
+    (e: React.MouseEvent) => {
+      e.preventDefault();
+      if (pathname === `/${locale}`) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        router.push(`/${locale}`);
+      }
+      setActiveHash("");
+    },
+    [pathname, locale, router],
+  );
 
   return { activeHash, scrollToSection, scrollToTop } as const;
 };

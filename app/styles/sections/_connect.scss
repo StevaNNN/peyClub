@@ -1,0 +1,100 @@
+@use "../abstract/api" as *;
+
+.connect-section {
+  background-color: #f6f7f8;
+  padding: 12.4rem 10rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5.5rem;
+  border-bottom-left-radius: 2.4rem;
+  border-bottom-right-radius: 2.4rem;
+
+  @include respond-below(lg) {
+    padding: 11rem 0;
+  }
+
+  @include respond-below(md) {
+    h1 {
+      font-size: 4.8rem;
+    }
+  }
+
+  @include respond-below(sm) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  @include respond-below(xs) {
+    padding: 8rem 2rem 0;
+
+    h1 {
+      font-size: 3.6rem;
+    }
+  }
+
+  .connect-section-form {
+    width: 100%;
+    max-width: 57.9rem;
+    height: 100%;
+    max-height: 54.2rem;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    padding: 6.6rem 4.6rem;
+
+    &::after {
+      content: "";
+      background-color: #004fe0;
+      width: calc(100% + 10.4rem);
+      height: calc(100% + 9.8rem);
+      position: absolute;
+      left: -5.2rem;
+      top: -4.9rem;
+      z-index: -1;
+      border-radius: 2.4rem;
+      pointer-events: none;
+      background-image: url("../../resources/graphics/contanctGraphic.png");
+      background-position: right;
+      background-size: cover;
+    }
+
+    &::before {
+      content: "";
+      background-color: #fff;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: -0;
+      z-index: 0;
+      border-radius: 2.4rem;
+      pointer-events: none;
+    }
+
+    .animate-button {
+      align-self: flex-start;
+    }
+  }
+
+  &-info {
+    max-width: 40rem;
+    gap: 4rem;
+
+    @include respond-above(1440) {
+      justify-self: center;
+    }
+
+    @include respond-below(md) {
+      max-width: 30rem;
+    }
+
+    @include respond-below(sm) {
+      max-width: 36rem;
+      justify-self: center;
+    }
+  }
+}
+
+.white-space {
+  height: 19.6rem;
+}
