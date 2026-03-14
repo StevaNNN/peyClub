@@ -4,9 +4,11 @@ import Text from "@/app/components/Text";
 import { LocaleDictionary } from "@/app/lib/i18n/types";
 import { routes } from "@/app/routes";
 import { FC } from "react";
+import { Locale } from "@/app/lib/i18n/locale";
 
 export interface CapabilitiesSectionProps {
   t: LocaleDictionary;
+  locale: Locale;
 }
 
 const cardsData = (t: LocaleDictionary) => [
@@ -32,7 +34,7 @@ const cardsData = (t: LocaleDictionary) => [
   },
 ];
 
-const CapabilitiesSection: FC<CapabilitiesSectionProps> = ({ t }) => {
+const CapabilitiesSection: FC<CapabilitiesSectionProps> = ({ t, locale }) => {
   return (
     <section
       className="section capabilities-section v-box"
@@ -73,7 +75,7 @@ const CapabilitiesSection: FC<CapabilitiesSectionProps> = ({ t }) => {
         </div>
         <Button
           className="animate-button"
-          href={routes.contact}
+          href={`/${locale}/${routes.contact}`}
           size="md"
           variant={"dark"}
         >

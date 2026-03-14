@@ -4,16 +4,18 @@ import Image from "next/image";
 
 import Text from "@/app/components/Text";
 import HeroImage from "@/app/resources/imgs/hero.png";
-import { LocaleDictionary } from "../../lib/i18n/types";
+import { LocaleDictionary } from "@/app/lib/i18n/types";
 import Button from "@/app/components/Button";
 import { routes } from "@/app/routes";
 import Icon from "@/app/components/Icon";
+import { Locale } from "@/app/lib/i18n/locale";
 
 interface HeroSectionProps {
   t: LocaleDictionary;
+  locale: Locale;
 }
 
-const HeroSection: FC<HeroSectionProps> = ({ t }) => {
+const HeroSection: FC<HeroSectionProps> = ({ t, locale }) => {
   return (
     <section className="section h-box hero-section" id="hero">
       <div className="section-inner h-box">
@@ -45,7 +47,7 @@ const HeroSection: FC<HeroSectionProps> = ({ t }) => {
           <Text fontSize="md">{t.heroSection.heroParagprah}</Text>
           <Button
             className="animate-button"
-            href={routes.contact}
+            href={`/${locale}/${routes.contact}`}
             size="md"
             variant={"brand"}
           >

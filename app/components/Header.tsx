@@ -6,7 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { routes, NAV_SECTION_IDS } from "../routes";
 import { useActiveSection } from "../hooks/useActiveSection";
 import { useSidemenu } from "../hooks/useSidemenu";
-import { Locale } from "../lib/i18n/locale";
+import { Locale } from "@/app/lib/i18n/locale";
 import { LocaleDictionary } from "../lib/i18n/types";
 import Button from "./Button";
 import Logo from "./Logo";

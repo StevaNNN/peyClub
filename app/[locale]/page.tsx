@@ -21,14 +21,14 @@ export default async function Home({
 
   return (
     <>
-      <HeroSection t={t} />
+      <HeroSection t={t} locale={locale} />
       <WhatSection t={t} />
       <AISection t={t} />
       <WhoSection t={t} />
       <CustomerSection t={t} />
       <EstablishmentSection t={t} />
       <CounterSection t={t} />
-      <CapabilitiesSection t={t} />
+      <CapabilitiesSection t={t} locale={locale} />
     </>
   );
 }
